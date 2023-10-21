@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Motorcycle Service</title>
+
+        <link
+            rel="stylesheet"
+            href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css"
+        >
+
+        <link
+            rel="stylesheet"
+            href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css"
+        >
+
+        <!-- Website Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+        <!-- Css Normalize -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <!-- Font Awesome Library -->
+        <!-- <link rel="stylesheet" href="css/all.min.css"> -->
+        <!-- Css Style -->
+        <style>
+            /* Global Rules */
+            * {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                color: black;
+                scroll-behavior: smooth;
+                line-height: 25.6px;
+            }
+
+            body::-webkit-scrollbar {
+                display: none;
+            }
+
+            /* Small */
+            @media (min-width: 300px) {
+            .ic-box {
+                grid-template-columns: 1fr;
+            }
+            .cb-icons {
+                flex-wrap: wrap;
+                gap: 50px;
+            }
+            .f-box {
+                flex-wrap: wrap;
+            }
+            .gallery img {
+                width: calc((100%) - 30px);
+            }
+            .gridimgs {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "img1"
+                "img2"
+                "img3";
+            }
+            .mcimg1 {
+                height: 100%;
+            }
+
+            .mcimg2 {
+                height: 100%;
+            }
+
+            .mcimg3 {
+                height: 100%;
+            }
+            .fmc-box img {
+                height: 241px;
+            }
+            .fmc-box h1 {
+                font-size: 26px;
+            }
+            .fmc-box1 p {
+                padding: 10px;
+            }
+            .fmc-box1 {
+                grid-template-columns: 1fr;
+            }
+            .ic-box1 {
+                text-align: center;
+                margin: auto;
+                padding: 20px;
+            }
+            }
+            @media (min-width: 768px) {
+            .container {
+                width: 750px;
+            }
+            .cb-icons {
+                flex-wrap: wrap;
+                gap: 50px;
+            }
+            .f-box {
+                flex-wrap: wrap;
+            }
+            .gallery img {
+                width: calc((100%) - 30px);
+            }
+            .gridimgs {
+                grid-template-columns: 1fr;
+                grid-template-areas: 
+                "img1"
+                "img2"
+                "img3";
+            }
+            .mcimg1 {
+                height: 100%;
+            }
+
+            .mcimg2 {
+                height: 100%;
+            }
+
+            .mcimg3 {
+                height: 100%;
+            }
+            .fmc-box img {
+                height: 241px;
+            }
+            .fmc-box h1 {
+                font-size: 26px;
+            }
+            .fmc-box1 p {
+                padding: 10px;
+            }
+            .fmc-box1 {
+                grid-template-columns: 1fr;
+            }
+            .ic-box1 {
+                text-align: center;
+                margin: auto;
+                padding: 10px;
+            }
+            .ic-box {
+                grid-template-columns: 1fr 1fr;
+            }
+            .i-box {
+                grid-template-columns: 1fr;
+            }
+            .landing h1 {
+                font-size: 32px;
+            }
+            }
+            /* Medium */
+            @media (min-width: 992px) {
+            .container {
+                width: 970px;
+            }
+            .cb-icons {
+                flex-wrap: nowrap;
+                gap: 150px;
+            }
+            .f-box {
+                flex-wrap: nowrap;
+            }
+            .gallery img {
+                width: calc((100%/3) - 30px);
+            }
+            .gridimgs {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                "img1 img2"
+                "img1 img3";
+            }
+            .mcimg1 {
+                height: 760px;
+            }
+
+            .mcimg2 {
+                height: 380px;
+            }
+
+            .mcimg3 {
+                height: 380px;
+            }
+            .fmc-box img {
+                height: 337px;
+            }
+            .fmc-box h1 {
+                font-size: 36px;
+            }
+            .fmc-box1 p {
+                padding: 30px;
+            }
+            .fmc-box1 {
+                grid-template-columns: 1fr 1fr;
+            }
+            .ic-box1 {
+                text-align: left;
+                margin: auto;
+                padding: 0px;
+            }
+            .ic-box {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+            .i-box {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .landing h1 {
+                font-size: 48px;
+            }
+            }
+            /* Large */
+            @media (min-width: 1200px) {
+            .container {
+                width: 1170px;
+            }
+            .cb-icons {
+                flex-wrap: nowrap;
+                gap: 150px;
+            }
+            .f-box {
+                flex-wrap: nowrap;
+            }
+            .gallery img {
+                width: calc((100%/3) - 30px);
+            }
+            .gridimgs {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                "img1 img2"
+                "img1 img3";
+            }
+            .mcimg1 {
+                height: 760px;
+            }
+
+            .mcimg2 {
+                height: 380px;
+            }
+
+            .mcimg3 {
+                height: 380px;
+            }
+            .fmc-box img {
+                height: 337px;
+            }
+            .fmc-box h1 {
+                font-size: 36px;
+            }
+            .fmc-box1 p {
+                padding: 30px;
+            }
+            .fmc-box1 {
+                grid-template-columns: 1fr 1fr;
+            }
+            .ic-box1 {
+                text-align: left;
+                margin: auto;
+                padding: 0px;
+            }
+            .ic-box {
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+            }
+            .i-box {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            .landing h1 {
+                font-size: 48px;
+            }
+            }
+
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .landing {
+                font-family: 'Roboto';
+                width: 100%;
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: right;
+                text-align: center;
+                background-image: url("https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/8b95db78f182530daeea68a3/pexels-photo-3969514.jpeg");
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                height: 80px;
+                padding: 20px 0;
+            }
+
+            header h2 {
+                color: white;
+                font-size: 28px;
+                margin: 0;
+            }
+
+            header i {
+                color: white;
+                padding-top: 2px;
+                margin: 0;
+                font-size: 24px;
+            }
+
+            .landing h1 {
+                color: white;
+                letter-spacing: 4px;
+                font-weight: 300;
+                line-height: normal;
+            }
+
+            .landing h1 span {
+                color: white;
+                font-weight: 700;
+            }
+
+            .landing p {
+                color: white;
+                font-size: 16px;
+                max-width: 500px;
+                margin: auto;
+            }
+
+            .i-box {
+                display: grid;
+                grid-template-rows: 1fr;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+
+            .i-box img {
+                width: 100%;
+            }
+
+            .i-box .i-box2 img {
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                object-position: 0%;
+            }
+
+            .i-boxh {
+                padding: 30px;
+                font-family: roboto;
+                align-self: center;
+            }
+
+            .i-boxh h1 {
+                font-weight: 300;
+                line-height: 39.6px;
+                font-size: 36px;
+            }
+
+            .i-pgf {
+                font-family: roboto;
+            }
+
+            .i-boxh::before {
+                content: "";
+                background-color: black;
+                display: block;
+                width: 86px;
+                height: 10px;
+            }
+
+            .ic-box {
+                display: grid;
+                align-items: center;
+                justify-content: space-between;
+                gap: 30px;
+            }
+
+            .ic-box1 {
+                color: white; 
+                font-family: roboto; 
+                max-width: 390px;
+                min-width: 360px;
+            }
+
+            .ic-box1 h1 {
+                line-height: 39.6px;
+            }
+
+            .ic-box1 p {
+                color: white; 
+                font-family: roboto;
+            }
+
+            .ic-box i {
+                font-size: 64px;
+                text-align: center;
+            }
+
+            .icon-box {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .icon-box h4 {
+                color: white;
+                font-family: roboto;
+                text-align: center;
+                font-weight: 400;
+                font-size: 18px;
+                text-transform: uppercase;
+            }
+
+            .fmc-box {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-bottom: 50px;
+                max-width: 887px;
+                margin: auto;
+            }
+
+            .fmc-box img {
+                object-fit: cover;
+                aspect-ratio: 889 / 337;
+                max-width: 100%;
+            }
+
+            .fmc-box1 {
+                display: grid;
+                font-size: 17px;
+                line-height: 27px;
+                color: #111111;
+                text-align: left;
+            }
+
+            .gridimgs {
+                height: fit-content;
+                display: grid;
+                width: 100%;
+            }
+
+            .gridimgs img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .mcimg1 {
+                grid-area: img1;
+            }
+
+            .mcimg2 {
+                grid-area: img2;
+            }
+
+            .mcimg3 {
+                grid-area: img3;
+            }
+
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+                justify-content: center;
+            }
+
+            .gallery img {
+                aspect-ratio: 1 / 1;
+                object-fit: cover;
+                object-position: 60% 75%;
+            }
+
+            .gallery-btn {
+                margin-top: 45px;
+                margin-bottom: 45px;
+                padding: 10px 30px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: white;
+                border: 1px solid black;
+                font-family: roboto;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+
+            .gallery-btn:hover {
+                background-color: black;
+                color: white;
+            }
+
+            .f-section {
+                height: fit-content;
+                background-color: black;
+                padding-top: 60px;
+            }
+
+            .f-box {
+                display: flex;
+                gap: 20px;
+            }
+
+            .f-box1 img, .f-box2 img{
+                width: 100%;
+            }
+
+            .f-box1 h1, .f-box2 p{
+                color: white;
+                font-family: roboto;
+                padding: 20px;
+            }
+
+            .f-box1 h1 {
+                line-height: 39.6px;
+                font-weight: 300;
+                font-size: 36px;
+            }
+
+            .f-btn {
+                margin-top: 25px;
+                padding: 15px 30px;
+                position: relative;
+                color: white;
+                background-color: black;
+                border: 2px solid white;
+                font-family: roboto;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 14px;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+
+            .f-btn:hover {
+                background-color: white;
+                color: black;
+            }
+
+            .c-box {
+                padding-top: 120px;
+                background-color: black;
+                min-height: 200px;
+            }
+
+            .c-box h1 {
+                font-family: roboto;
+                text-align: center;
+                font-size: 36px;
+            }
+
+            .cb-icons {
+                display: flex;
+                justify-content: center;
+                padding: 40px;
+            }
+
+            .cb-icons i {
+                font-size: 48px;
+            }
+
+            .cb-icon {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cb-icon h2 {
+                font-family: roboto;
+                font-weight: 400;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="landing">
+            <div class="container">
+                <header>
+                    <h2>LOGO</h2>
+                    <i class="fa-sharp fa-regular fa-bars" style="color: #ffffff;"></i>
+                </header>
+                <div>
+                    <h1>FULL <span> MOTORCYCLE </span>SERVICE</h1>
+                    <p>As the owner of a motorcycle, it is your legal duty to ensure it is roadworthy and does not pose a hazard to yourself, any passengers, other road users or the general public.</p>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="i-box">
+                    <div class="i-box1">
+                        <img src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/c7abdd58df08559aa4006828/pexelsphoto3660529.jpeg">
+                    </div>
+                    <div class="i-boxh">
+                        <h1>
+                            WE HAVE EXPANDED OUR <span style="font-weight: 700;">SERVICES TO INCLUDE</span> MOTORCYCLE STORAGE
+                        </h1>
+                    </div>
+                    <div class="i-box2">
+                        <img src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/c07545ecd35f5cc7bec5944b/pexelsphoto3660526.jpeg">
+                        <p class="i-pgf">
+                            Close to 20 years ago, we realized that there was no safe roadside assistance geared solely for motorcycles. Having seen too many bikes being chained, dangerously, to the tow bars of regular tow trucks, and extensive market research, we started our company...
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="background-color: black; padding: 20px 0;">
+            <div class="container">
+                <div class="ic-box">
+                    <div class="ic-box1">
+                        <h1 style="font-weight: 300; font-family: roboto; color: white; font-size: 36px;">RENTAL CAR <span style="font-weight: 700; color: white;">SERVICES</span></h1>
+                        <p>Find the best possible rental car rate. Compare rates worldwide and save up to 60% on deals from over 1,053 car rental companies.</p>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fa-thin fa-location-dot" style="color: #ffffff;"></i>
+                        <h4>Location</h4>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fa-thin fa-car" style="color: #ffffff;"></i>
+                        <h4>250+ cars</h4>
+                    </div>
+                    <div class="icon-box">
+                        <i class="fa-thin fa-users" style="color: #ffffff;"></i>
+                        <h4>happy users</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="margin-top: 60px;font-family: roboto;">
+            <div class="container">
+                <div class="fmc-box">
+                    <h1 style="font-weight: 300;margin-bottom: 30px; line-height: initial;">FULL <span style="font-weight: 700;">MOTORCYCLE</span> SERVICE</h1>
+                    <img src="https://images03.nicepage.com/c461c07a441a5d220e8feb1a/9c2130e6a33955c491068394/rfdsemin.jpg" alt="">
+                    <div class="fmc-box1">
+                        <p>
+                            As the owner of a motorcycle, it is your legal duty to ensure it is roadworthy and does not pose a hazard to yourself, any passengers, other road users or the general public.
+                        </p>
+                        <p>
+                            A full motorcycle service will ensure any mechanical or electrical problems are ironed out ahead of your MOT and of course before they affect the safe operation.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="margin-top: 20px;">
+            <div class="gridimgs">
+                <img class="mcimg1" src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/c33c7d8f142f5a37b99ec07f/pexelsphoto2611688.jpeg" alt="">
+                <img class="mcimg2" src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/90ab7921148459e6b475699f/pexelsphoto2611685.jpeg" alt="">
+                <img class="mcimg3" src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/cc71b4947e8c5201907b1df7/pexelsphoto2611681.jpeg" alt="">
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h1 style="font-family: roboto; font-size: 36px; font-weight: 300; text-align: center; margin: 50px;">
+                    OUR <span style="font-weight: 700;">GALLERY</span>
+                </h1>
+                <div class="gallery">
+                    <img src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/4b57e3e99c67576d8a66acc6/pexelsphoto2948295.jpeg" alt="">
+                    <img src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/2eb840bfe3a45033875119d5/pexelsphoto2949302.jpeg" alt="">
+                    <img src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/8b8c21773d2459f8a97400ab/pexelsphoto2949293.jpeg" alt="">
+                    <img src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/82f1d3a117795e969c937f35/pexelsphoto2948297.jpeg" alt="">
+                    <img src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/fd68412f7dfc501aa858d8a0/pexelsphoto2549941.jpeg" alt="">
+                    <img src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/22921ab1de245dbaae6fee24/pexelsphoto2116475.jpeg" alt="">
+                </div>
+                <button class="gallery-btn">
+                    Learn More
+                </button>
+            </div>
+        </section>
+        <section class="f-section">
+            <div class="container">
+                <div class="f-box">
+                    <div class="f-box1">
+                        <img src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/90ab7921148459e6b475699f/pexelsphoto2611685.jpeg" alt="">
+                        <h1>
+                            WE HAVE EXPANDED OUR SERVICES TO <span style="font-weight: 700; color: white;">INCLUDE MOTORCYCLE STORAGE</span>
+                        </h1>
+                    </div>
+                    <div class="f-box2">
+                        <img src="https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/c33c7d8f142f5a37b99ec07f/pexelsphoto2611688.jpeg" alt="">
+                        <p>
+                            Close to 20 years ago, we realized that there was no safe roadside assistance geared solely for motorcycles. Having seen too many bikes being chained, dangerously, to the tow bars of regular tow trucks, and extensive market research, we started our company...
+                            <br>
+                            <button class="f-btn">
+                                Read More
+                            </button>
+                        </p>
+                    </div>
+                </div>
+                <div class="c-box">
+                    <h1 style="font-weight: 300; color: white;">
+                        <span style="font-weight: 700; color: white;">CONTACT</span> US
+                    </h1>
+                    <div class="cb-icons">
+                        <div class="cb-icon cb-icon1">
+                            <i class="fa-thin fa-map-location-dot" style="color: #ffffff;"></i>    
+                            <h2 style="color: white; text-align: center;">
+                                ADDRESS
+                            </h2>
+                            <p style="color: white; font-family: roboto; margin-top: 0; font-size: 18px;">
+                                27 13 Lowe Haven
+                            </p>
+                        </div>
+                        <div class="cb-icon cb-icon2">
+                            <i class="fa-thin fa-mobile-signal-out" style="color: #ffffff;"></i> 
+                            <h2 style="color: white; text-align: center;">
+                                PHONE
+                            </h2>
+                            <p style="color: white; font-family: roboto; margin-top: 0; font-size: 18px;">
+                                111 343 43 43
+                            </p>
+                        </div>
+                        <div class="cb-icon cb-icon3">
+                            <i class="fa-thin fa-envelope" style="color: #ffffff;"></i>    
+                            <h2 style="color: white; text-align: center;">
+                                EMAIL
+                            </h2>
+                            <p style="color: white; font-family: roboto; margin-top: 0; font-size: 18px;">
+                                business@info.com
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
